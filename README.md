@@ -2,6 +2,13 @@
 Physics-informed neural networks (PINNs) for solving the time-dependent (and time-independent) Schrödinger Equation in 1D. The network outputs the real and imaginary parts of
 ψ(x,t) and is trained by minimizing a physics-aware loss (PDE residual + constraints).
 
+
+Time evolution of the 𝑛=1 (left) and 𝑛=2 (right) eigenstates in a infinite square well:
+<p align="center">
+  <img src="graphs/time_dep_se_isq_state1.gif" alt="gif 1" width="49%">
+  <img src="graphs/time_dep_se_isq_state2.gif" alt="gif 2" width="49%">
+</p>
+
 ## Equations
 Time-dependent Schrödinger equation (TDSE)
 
@@ -49,11 +56,4 @@ $$
 \phi_n(x)=\sqrt{2}\,\sin(n\pi x),\qquad
 E_n=\tfrac12\,n^2\pi^2,\qquad n=1,2,\dots
 $$
-
-Time evolution of states n=1 (left) and n=2 (right) using PINNs
-<p align="center">
-  <img src="graphs/time_dep_se_isq_state1.gif" alt="gif 1" width="49%">
-  <img src="graphs/time_dep_se_isq_state2.gif" alt="gif 2" width="49%">
-</p>
-
 
