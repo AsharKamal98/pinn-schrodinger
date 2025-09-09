@@ -69,7 +69,11 @@ class tiSchrodingerII(torch.nn.Module):
         return self.net(x)
     
     def V(self, x):
-        return 0.5 * x**2
+        # pot = torch.zeros_like(x)
+        # pot[x < -1] = 50000.0
+        # pot[x > 1] = 50000.0
+        pot = 0.5 * x**2
+        return pot
     
     def pde_residual(self, x_interior):
         x = x_interior.clone().detach().requires_grad_(True)
